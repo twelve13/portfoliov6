@@ -80,7 +80,7 @@ header {
 #header-illustration {
 	align-self: center;
 	display: flex;
-	height: 80%;
+	height: 70%;
 }
 
 #gardener {
@@ -268,11 +268,11 @@ section:nth-child(2n) .section-examples {
 
 #leaf-outer {
 	border: solid 4px #C0E4D8;
-	height: 100%;
+	height: 75%;
 	max-width: 275px;
 	min-height: 200px;
 	position: relative;
-	width: 100%;
+	width: 75%;
 }
 
 #leaf-outer.active {
@@ -366,6 +366,10 @@ section:nth-child(2n) .section-examples {
 @media screen and (max-width: 1350px) {
 	#name {
 		font-size: 96px;
+	}
+
+	section {
+		grid-template-columns: 1fr 300px 100px 300px 1fr;
 	}
 
 	.section-description, .section-graphic {
