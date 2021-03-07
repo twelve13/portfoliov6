@@ -95,9 +95,15 @@ header {
 	width: 100vw;
 }
 
+/*ABOUT*/
+#about p {
+	grid-column-start: 2;
+	grid-column-end: span 3;
+}
+
 /*PROJECTS*/
 
-section {
+.section-item {
 	align-items: center;
 	display: grid;
 	grid-template-columns: 1fr 400px 100px 400px 1fr;
@@ -117,6 +123,10 @@ section p {
 	line-height: 36px;
 }
 
+section a {
+	color: white;
+}
+
 .section-graphic {
 	display: flex;
 	grid-column-start: 4;
@@ -129,35 +139,35 @@ section p {
 	grid-row-start: 1;
 }
 
-section:nth-child(2n) .section-description {
+#projects .section-item:nth-child(2n) .section-description {
 	grid-column-start: 4;
 }
 
-section:nth-child(2n) .section-graphic {
+#projects .section-item:nth-child(2n) .section-graphic {
 	grid-column-start: 2;
 }
 
-.section-examples {
+#projects .section-examples {
 	grid-column-start: 2;
 	grid-row-start: 2;
 }
 
-section:nth-child(2n) .section-examples {
+#projects .section-item:nth-child(2n) .section-examples {
 	grid-column-start: 4;
 }
 
-.section-examples-content {
+#projects .section-examples-content {
 	font-size: 24px;
 	margin: 0;
 	padding: 0;
 	width: 100%;
 }
 
-.section-examples li {
+#projects .section-examples li {
 	list-style: none;
 }
 
-.section-examples li::before {
+#projects .section-examples li::before {
 	background-image: url("assets/leaf-small.png");
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -169,7 +179,7 @@ section:nth-child(2n) .section-examples {
 	width: 25px;
 }
 
-.section-graphic-content {
+#projects .section-graphic-content {
 	position: relative;
 }
 
@@ -354,7 +364,7 @@ section:nth-child(2n) .section-examples {
 		text-align: left;
 	}
 
-	section {
+	.section-item {
 		padding: 10% 0;
 	}
 
@@ -368,7 +378,7 @@ section:nth-child(2n) .section-examples {
 		font-size: 96px;
 	}
 
-	section {
+	.section-item {
 		grid-template-columns: 1fr 300px 100px 300px 1fr;
 	}
 
@@ -400,7 +410,7 @@ section:nth-child(2n) .section-examples {
 		text-align: center;
 	}
 
-	section {
+	.section-item {
 		display: block;
 		padding: 3% 6%;
 		text-align: center;
