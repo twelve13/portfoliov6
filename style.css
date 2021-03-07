@@ -92,7 +92,7 @@ header {
 	background-size: contain;
 	height: calc(100vh - 50px);
 	position: absolute;
-	width: 100vw;
+	width: 99vw;
 }
 
 /*ABOUT*/
@@ -344,6 +344,25 @@ section a {
 	width: 68px;
 }
 
+/*CONTACT*/
+#contact {
+	background-color: #C0E4D8;
+}
+
+#contact .section-item {
+	padding: 0;
+}
+
+#contact ul {
+	display: flex;
+	grid-column-start: 2;
+	grid-column-end: span 3;
+	grid-row-end: span 2;
+	justify-content: space-around;
+	list-style: none;
+	padding: 0;
+}
+
 
 
 @media screen and (max-width: 1500px) {
@@ -438,9 +457,14 @@ section a {
 		width: 100%;
 	}
 
-	.section-examples {
+	.section-examples:not(#projects .section-item:last-of-type .section-examples) {
 		border-bottom: solid 1px silver;
 		padding: 5% 0 12% 0;
+	}
+
+	#contact ul {
+		margin: 0;
+		padding: 5% 0;
 	}
 }
 
