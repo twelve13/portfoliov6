@@ -115,6 +115,7 @@ header {
 
 .section-item {
 	align-items: center;
+	display: -ms-grid;
 	display: grid;
 	-ms-grid-columns: 1fr 400px 100px 400px 1fr;
 	grid-template-columns: 1fr 400px 100px 400px 1fr;
