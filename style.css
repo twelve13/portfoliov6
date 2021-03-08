@@ -105,7 +105,9 @@ header {
 
 /*ABOUT*/
 #about div {
+	-ms-grid-column: 2;
 	grid-column-start: 2;
+	-ms-grid-column-span: 3;
 	grid-column-end: span 3;
 }
 
@@ -114,7 +116,9 @@ header {
 .section-item {
 	align-items: center;
 	display: grid;
+	-ms-grid-columns: 1fr 400px 100px 400px 1fr;
 	grid-template-columns: 1fr 400px 100px 400px 1fr;
+	-ms-grid-rows: 7fr 2fr;
 	grid-template-rows: 7fr 2fr;
 	padding: 6% 0;
 }
@@ -137,30 +141,40 @@ section a {
 
 .section-graphic {
 	display: flex;
+	-ms-grid-column: 4;
 	grid-column-start: 4;
+	-ms-grid-row: 1;
 	grid-row-start: 1;
+	-ms-grid-row-span: 2;
 	grid-row-end: span 2;
 }
 
 .section-description {
+	-ms-grid-column: 2;
 	grid-column-start: 2;
+	-ms-grid-row: 1;
 	grid-row-start: 1;
 }
 
 #projects .section-item:nth-child(2n) .section-description {
+	-ms-grid-column: 4;
 	grid-column-start: 4;
 }
 
 #projects .section-item:nth-child(2n) .section-graphic {
+	-ms-grid-column: 2;
 	grid-column-start: 2;
 }
 
 #projects .section-examples {
+	-ms-grid-column: 2;
 	grid-column-start: 2;
-	grid-row-start: 2;
+	-ms-grid-row: 1;
+	grid-row-start: 1;
 }
 
 #projects .section-item:nth-child(2n) .section-examples {
+	-ms-grid-column: 4;
 	grid-column-start: 4;
 }
 
@@ -363,8 +377,11 @@ section a {
 
 #contact ul {
 	display: flex;
+	-ms-grid-column: 2;
 	grid-column-start: 2;
+	-ms-grid-column-span: 3;
 	grid-column-end: span 3;
+	-ms-grid-row-span: 2;
 	grid-row-end: span 2;
 	justify-content: space-around;
 	list-style: none;
@@ -406,6 +423,7 @@ section a {
 	}
 
 	.section-item {
+		-ms-grid-columns: 1fr 300px 100px 300px 1fr;
 		grid-template-columns: 1fr 300px 100px 300px 1fr;
 	}
 
