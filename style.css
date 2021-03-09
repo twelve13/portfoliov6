@@ -451,6 +451,7 @@ section a {
 	#header-illustration {
 		height: 50%;
 		justify-content: center;
+		width: auto;
 	}
 
 	#title {
