@@ -211,6 +211,39 @@ section a {
 	width: 32%;
 }
 
+#websites .section-graphic {
+	height: 100%;
+	width: 100%;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+#websites .section-graphic-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 258px;
+}
+
+#houseplant {
+	height: 130px;
+	width: 130px;
+}
+
+#houseplant.activated {
+	height: 210px;
+	transition: all 1s;
+	width: 258px;
+}
+
+#plant-pot {
+	background-color: #13202f;;
+	border: solid 2px #C0E4D8;
+	border-radius: 5px 5px 50% 50%;
+	height: 105px;
+	width: 125px;
+}
+
 #plants .section-graphic-content{
 	background: repeating-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 34px, rgba(255, 255, 255, 0.16) 34px, rgba(255, 255, 255, 0.16) 35px);
 	border-bottom: solid 2px #C0E4D8;
@@ -494,6 +527,10 @@ section a {
 	#contact ul {
 		margin: 0;
 		padding: 5% 0;
+	}
+
+	#websites .section-graphic {
+		height: 300px;
 	}
 }
 
