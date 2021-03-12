@@ -207,15 +207,11 @@ section a {
 	position: relative;
 }
 
-.carrot {
-	width: 32%;
-}
-
 #websites .section-graphic {
-	height: 100%;
-	width: 100%;
 	align-items: flex-end;
+	height: 100%;
 	justify-content: center;
+	width: 100%;
 }
 
 #websites .section-graphic-content {
@@ -230,12 +226,6 @@ section a {
 	width: 130px;
 }
 
-#houseplant.activated {
-	height: 210px;
-	transition: all 1s;
-	width: 258px;
-}
-
 #plant-pot {
 	background-color: #13202f;;
 	border: solid 2px #C0E4D8;
@@ -244,7 +234,13 @@ section a {
 	width: 125px;
 }
 
-#plants .section-graphic-content{
+#websites-graphic.activated #houseplant {
+	height: 210px;
+	transition: all 1s;
+	width: 258px;
+}
+
+#data-vis-graphic .section-graphic-content{
 	background: repeating-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 34px, rgba(255, 255, 255, 0.16) 34px, rgba(255, 255, 255, 0.16) 35px);
 	border-bottom: solid 2px #C0E4D8;
 	overflow: hidden;
@@ -259,16 +255,16 @@ section a {
 	width: 32%;
 }
 
-#plant1.activated {
+#data-vis-graphic.activated #plant1 {
 	top: 120px;
 }
 
-#plant2.activated {
+#data-vis-graphic.activated #plant2 {
 	top: 10px;
 	transition-delay: .5s;
 }
 
-#plant3.activated {
+#data-vis-graphic.activated #plant3 {
 	top: 90px;
 	transition-delay: 1s;
 }
@@ -306,15 +302,17 @@ section a {
 	width: 13%;
 }
 
-#flower1.activated, #flower2.activated, #flower3.activated {
+#articles-graphic.activated #flower1,
+#articles-graphic.activated #flower2,
+#articles-graphic.activated #flower3 {
 	opacity: 1;
 }
 
-#flower2.activated {
+#articles-graphic.activated #flower2 {
 	transition-delay: .3s;
 }
 
-#flower3.activated {
+#articles-graphic.activated #flower3 {
 	transition-delay: .6s;
 }
 
@@ -326,12 +324,16 @@ section a {
 	width: 120px;
 }
 
-#rake.activated {
+#tools-graphic {
+	overflow: hidden;
+}
+
+#tools-graphic.activated #rake{
 	left: 70%;
 }
 
-#tools-graphic {
-	overflow: hidden;
+#tools-graphic.activated #tools-graphic-content {
+	left: 100%;
 }
 
 #tools-graphic-content {
@@ -345,10 +347,6 @@ section a {
 	transition-delay: .2s;
 	width: 100%;
 	z-index: -1;
-}
-
-#tools-graphic-content.activated {
-	left: 100%;
 }
 
 #illustrations .section-graphic, #illustrations-graphic .section-graphic-content {
@@ -374,7 +372,7 @@ section a {
 	width: 100%;
 }
 
-.carrot.activated .carrot-body {
+#illustrations-graphic.activated .carrot-body {
 	border: solid 2px #f90;
 	border-radius: 50% 50% 20px 20px;
 	transition: all 1s;
@@ -388,7 +386,7 @@ section a {
 	width: 100%;
 }
 
-.carrot.activated .carrot-leaf-left {
+#illustrations-graphic.activated .carrot-leaf-left {
 	border: solid 2px #81d600;
 	border-radius: 50% 40% 0 40%;
 	margin-bottom: 0;
@@ -397,7 +395,7 @@ section a {
 	width: 60%;
 }
 
-.carrot.activated .carrot-leaf-right {
+#illustrations-graphic.activated .carrot-leaf-right {
 	border: solid 2px #81d600;
 	border-radius: 40% 50% 40% 0;
 	margin-bottom: 0;
