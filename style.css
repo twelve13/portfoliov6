@@ -254,7 +254,8 @@ section a {
 	height: 300px;
 	max-width: 150px;
 	position: relative;
-	top: 150px;
+	top: 170px;
+	transition: all .8s;
 	width: 32%;
 }
 
@@ -264,43 +265,65 @@ section a {
 
 #plant2.activated {
 	top: 10px;
+	transition-delay: .5s;
 }
 
 #plant3.activated {
-	top: 100px;
+	top: 90px;
+	transition-delay: 1s;
 }
 
 #branch {
 	width: 100%;
 }
 
-#flower1.activated {
+#flower1 {
 	left: 13%;
+	opacity: 0;
 	position: absolute;
 	top: 20%;
+	transition: all .8s;
 	width: 28%;
 	z-index: -1;
 }
 
-#flower2.activated {
+#flower2 {
 	left: 74%;
+	opacity: 0;
 	position: absolute;
 	top: 5px;
+	transition: all .8s;
 	width: 28%;
 	z-index: -1;
 }
 
-#flower3.activated {
+#flower3 {
 	left: 47%;
+	opacity: 0;
 	position: absolute;
 	top: -25px;
+	transition: all .8s;
 	width: 13%;
 }
 
+#flower1.activated, #flower2.activated, #flower3.activated {
+	opacity: 1;
+}
+
+#flower2.activated {
+	transition-delay: .3s;
+}
+
+#flower3.activated {
+	transition-delay: .6s;
+}
+
 #rake {
-	height: 50%;
+	height: 150px;
 	position: relative;
-	width: 30%;
+	left: 0;
+	transition: all 1s;
+	width: 120px;
 }
 
 #rake.activated {
@@ -312,93 +335,77 @@ section a {
 }
 
 #tools-graphic-content {
-	background-image: url("assets/weeds.png");
+	background-image: url("assets/rocks.png");
+	background-position: bottom;
 	background-repeat: no-repeat;
 	background-size: contain;
+	left: 0;
+	position: relative;
+	transition: all 1s;
+	transition-delay: .2s;
 	width: 100%;
+	z-index: -1;
 }
 
 #tools-graphic-content.activated {
 	left: 100%;
-	position: relative;
 }
 
-#illustrations-graphic, #illustrations-graphic .section-graphic-content {
+#illustrations .section-graphic, #illustrations-graphic .section-graphic-content {
 	height: 100%;
 	width: 100%;
 }
 
-#illustrations-graphic .section-graphic-content {
+#illustrations .section-graphic-content {
+	align-items: center;
 	display: flex;
-	justify-content: center;
-}
-
-#leaf-outer {
-	border: solid 4px #C0E4D8;
-	height: 75%;
-	max-width: 275px;
-	min-height: 200px;
-	position: relative;
-	width: 75%;
-}
-
-#leaf-outer.active {
-	border: solid 4px #0fb;
-	border-radius: 37% 63% 45% 55% / 19% 98% 2% 81%;
-	margin-bottom: 50px;
-	transform: rotate(20deg);
-}
-
-#leaf-midrib {
-	background-color: #c0e4d8;
-	height: 3px;
-	position: absolute;
-	top: 20px;
+	justify-content: space-between;
 	width: 100%;
 }
 
-#leaf-midrib.active {
-	background-color: #0fb;
-	border-radius: 50%;
-	top: 99%;
-	transform: rotate(37deg);
-	transform-origin: bottom right;
+.carrot {
+	height: 150px;
+	width: 27%;
 }
 
-#leaf-vein1 {
-	background-color: #c0e4d8;
-	height: 3px;
-	left: 125px;
-	position: absolute;
-	top: 75px;
-	width: 100px;
+.carrot-body {
+	border: solid 2px #C0E4D8;
+	height: 80px;
+	width: 100%;
 }
 
-#leaf-vein1.active {
-	background-color: #0fb;
-	border-radius: 50% 0;
-	left: 25px;
-	top: 13px;
-	transform: rotate(-26deg);
-	width: 58px;
+.carrot.activated .carrot-body {
+	border: solid 2px #f90;
+	border-radius: 50% 50% 20px 20px;
+	transition: all 1s;
 }
 
-#leaf-vein2 {
-	background-color: #c0e4d8;
-	height: 3px;
-	left: 125px;
-	position: absolute;
-	top: 100px;
-	width: 100px;
+.carrot-leaf-left, .carrot-leaf-right {
+	background-color: #13202f;;
+	border: solid 2px #C0E4D8;
+	height: 20px;
+	margin-bottom: 10px;
+	width: 100%;
 }
 
-#leaf-vein2.active {
-	background-color: #0fb;
-	border-radius: 50% 0;
-	left: 100px;
-	top: -17px;
-	transform: rotate(-150deg);
-	width: 68px;
+.carrot.activated .carrot-leaf-left {
+	border: solid 2px #81d600;
+	border-radius: 50% 40% 0 40%;
+	margin-bottom: 0;
+	transform: rotate(36deg);
+	transition: all 1s;
+	width: 60%;
+}
+
+.carrot.activated .carrot-leaf-right {
+	border: solid 2px #81d600;
+	border-radius: 40% 50% 40% 0;
+	margin-bottom: 0;
+	margin-left: 45%;
+	transform-origin: left;
+	transform: rotate(-50deg);
+	transition: all 1s;
+	width: 60%;
 }
 
 /*CONTACT*/
@@ -521,7 +528,7 @@ section a {
 
 	.section-examples:not(#projects .section-item:last-of-type .section-examples) {
 		border-bottom: solid 1px silver;
-		padding: 5% 0 12% 0;
+		padding: 10% 0 12% 0;
 	}
 
 	#contact ul {
@@ -529,8 +536,12 @@ section a {
 		padding: 5% 0;
 	}
 
-	#websites .section-graphic {
+	#websites .section-graphic, #illustrations .section-graphic {
 		height: 300px;
+	}
+
+	#rake.activated {
+		left: 60%;
 	}
 }
 
