@@ -1,41 +1,36 @@
-let websitesButton = document.querySelector("#websites-button");
-let dataVisButton = document.querySelector("#data-vis-button");
-let articlesButton = document.querySelector("#articles-button");
-let toolsButton = document.querySelector("#tools-button");
-let illustrationsButton = document.querySelector("#illustrations-button");
-
 let sectionGraphics = document.querySelectorAll(".section-graphic");
 
-let websitesGraphic = document.querySelector("#websites-graphic");
-let dataVisGraphic = document.querySelector("#data-vis-graphic");
-let articlesGraphic = document.querySelector("#articles-graphic");
-let toolsGraphic = document.querySelector("#tools-graphic");
-let illustrationsGraphic = document.querySelector("#illustrations-graphic");
+function debounce(func, wait = 20, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
 
-
-
-function activateWebsites(){
-	websitesGraphic.classList.add("activated");
+//adapted from Wes Bos video
+function checkActivation(e) {
+	sectionGraphics.forEach(section => {
+		//scrollY will tell you how far scrolled with respect to top of the page.  Add inner height to get pixel level at bottom of page
+		const windowBottom = (window.scrollY + window.innerHeight);
+		console.log(`window bottom is ${windowBottom}`);
+		const sectionBottom = section.offsetTop + 300;
+		console.log(`sectionBottom is ${sectionBottom}`);
+		const showTheSection = windowBottom > section.offsetTop + 300;
+		const isNotScrolledPast = window.scrollY < sectionBottom;
+		if (showTheSection && isNotScrolledPast) {
+			section.classList.add("activated");
+		} else {
+			section.classList.remove("activated");
+		}
+	});
 }
 
-function activateDataVis(){
-	dataVisGraphic.classList.add("activated");
-}
-
-function activateArticles(){
-	articlesGraphic.classList.add("activated");
-}
-
-function activateTools(){
-	toolsGraphic.classList.add("activated");
-}
-
-function activateIllustrations(){
-	illustrationsGraphic.classList.add("activated");
-}
-
-websitesButton.addEventListener("click", activateWebsites);
-dataVisButton.addEventListener("click", activateDataVis);
-articlesButton.addEventListener("click", activateArticles);
-toolsButton.addEventListener("click", activateTools);
-illustrationsButton.addEventListener("click", activateIllustrations);
+window.addEventListener("scroll", debounce(checkActivation));

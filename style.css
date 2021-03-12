@@ -223,6 +223,7 @@ section a {
 
 #houseplant {
 	height: 130px;
+	transition: all 1s;
 	width: 130px;
 }
 
@@ -235,7 +236,7 @@ section a {
 }
 
 #websites-graphic.activated #houseplant {
-	height: 210px;
+	height: 190px;
 	transition: all 1s;
 	width: 258px;
 }
@@ -257,15 +258,18 @@ section a {
 
 #data-vis-graphic.activated #plant1 {
 	top: 120px;
+	transition: all 1s;
 }
 
 #data-vis-graphic.activated #plant2 {
 	top: 10px;
+	transition: all 1s;
 	transition-delay: .5s;
 }
 
 #data-vis-graphic.activated #plant3 {
 	top: 90px;
+	transition: all 1s;
 	transition-delay: 1s;
 }
 
@@ -369,6 +373,7 @@ section a {
 .carrot-body {
 	border: solid 2px #C0E4D8;
 	height: 80px;
+	transition: all 1s;
 	width: 100%;
 }
 
@@ -383,6 +388,7 @@ section a {
 	border: solid 2px #C0E4D8;
 	height: 20px;
 	margin-bottom: 10px;
+	transition: all 1s;
 	width: 100%;
 }
 
@@ -409,6 +415,7 @@ section a {
 /*CONTACT*/
 #contact {
 	background-color: #C0E4D8;
+	margin-top: 7%;
 }
 
 #contact .section-item {
