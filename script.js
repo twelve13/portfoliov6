@@ -20,9 +20,7 @@ function checkActivation(e) {
 	sectionGraphics.forEach(section => {
 		//scrollY will tell you how far scrolled with respect to top of the page.  Add inner height to get pixel level at bottom of page
 		const windowBottom = (window.scrollY + window.innerHeight);
-		console.log(`window bottom is ${windowBottom}`);
 		const sectionBottom = section.offsetTop + 300;
-		console.log(`sectionBottom is ${sectionBottom}`);
 		const showTheSection = windowBottom > section.offsetTop + 300;
 		const isNotScrolledPast = window.scrollY < sectionBottom;
 		if (showTheSection && isNotScrolledPast) {
